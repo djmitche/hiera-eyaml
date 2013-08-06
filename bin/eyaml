@@ -34,9 +34,9 @@ def get_input(options)
 
   if options[:password]
     ask("Enter password: ") {|q| q.echo = "*" }
+  else
+    get_file_input(options)
   end
-
-  get_file_input(options)
 end
 
 def encrypt(public_key, plaintext)
